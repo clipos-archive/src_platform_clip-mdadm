@@ -1,0 +1,45 @@
+# CLIP ChangeLog for app-clip/clip-mdadm
+
+*clip-mdadm-1.1.4 (20 Apr 2012)
+
+  20 Apr 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-mdadm-1.1.4.ebuild, -clip-mdadm-1.1.3.ebuild:
+  Fix build with gcc-4.6.
+
+*clip-mdadm-1.1.3 (24 Apr 2009)
+
+  24 Apr 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-mdadm-1.1.3.ebuild, -clip-mdadm-1.1.2.ebuild:
+  Fix a format string error that prevents compilation with gcc-4.3.3.
+
+  17 Apr 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  clip-mdadm-1.1.2.ebuild:
+  Switch to verictl2.eclass and ccsd hash.
+
+*clip-mdadm-1.1.2 (30 Mar 2009)
+
+  30 Mar 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-mdadm-1.1.2.ebuild, -clip-mdadm-1.1.1.ebuild:
+  Fix warnings with GCC-4.
+
+*clip-mdadm-1.1.1 (07 Jul 2008)
+
+  07 Jul 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-mdadm-1.1.1.ebuild, -clip-mdadm-1.1.ebuild:
+  Fix mdadmd init script dependencies : depend on reducecap.
+
+  07 Nov 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  -clip-mdadm-1.0.ebuild:
+  Remove stale ebuild.
+  
+*clip-mdadm-1.1 (03 Oct 2007)
+
+  03 Oct 2007; EADS D&S <clipos@ssi.gouv.fr>
+  +clip-mdadm-1.1.ebuild:
+  Correct error messages.
+
+*clip-mdadm-1.0 (19 Sep 2007)
+
+  19 Sep 2007; EADS D&S <clipos@ssi.gouv.fr>
+  +clip-mdadm-1.0.ebuild:
+  Initial import.

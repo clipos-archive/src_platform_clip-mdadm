@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# Copyright © 2007-2018 ANSSI. All Rights Reserved.
+
+depend() {
+	need reducecap
+}
+
+start() {
+	ebegin "Starting mdadmd"
+	start-stop-daemon --start --exec /sbin/mdadmd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mdadmd"
+	start-stop-daemon --stop --name mdadmd
+	eend $?
+}

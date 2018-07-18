@@ -1,0 +1,48 @@
+.TH CLIP_MDADM 8 "AUGUST 2007" Linux "User Manuals"
+.SH NAME
+clip_mdam \- Clip soft RAID manager
+.SH DESCRIPTION
+.B clip_mdadm
+gathers different tools to manage software RAID devices.
+.PP
+.BR mdadmd
+is a daemon which communicates with
+.BR mdadmclt
+(see
+.I clip_mdadm_clt (8)
+) through a UNIX socket in the admin jail.
+It can perform two actions depending on the command received
+from
+.BR mdadmclt.
+.PP
+\-
+.I sdC
+launches the script
+.BR clip-resync.sh
+with
+.I sdc
+as parameter.
+.PP
+\-
+.I sdB
+launches the script
+.BR clip-resync.sh
+with
+.I sdc
+as parameter.
+.PP
+.BR clip-resync.sh
+takes partition table and mbr from sda or sdb (depending on its presence)
+and puts it into disk set as parameter (sdb or sdc). All partitions of the
+later are appended (synced) to all logical arrays. Faulty partitions are then
+removed.
+.BR NOTE
+This scripts requires two disks. New disk has to be inserted once machine
+has completely boot (login windows has appeared) and script called with sdb
+argument. No reboot is necessary if script is called with sdc argument.
+However, reboot is recommended between two resync.
+.PP
+The logs are stored using 
+.BR logger (1).
+.SH AUTHORS
+EADS Defence And Security Systems
